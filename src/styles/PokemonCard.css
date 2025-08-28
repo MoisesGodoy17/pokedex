@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+.pokemon-card{
+    display: flex;
+    flex-direction: column;
+    background-color:blanchedalmond;
+    border-radius: 30px;
+    border: 2px solid red;
+    margin: 10px;
+    width: 30vh;
+    height: auto;
+    padding: 10px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.favorite-icon {
+   display: flex;
+   justify-content: end;
+   margin-right: 1vh;
+}
+
+.favorite-icon img {
+    width: 25px;
+    height: 25px;
+}
+
+.pokemon-image {
+    flex: 1;
+    display: flex;  
+    justify-content: center;
+}
+
+.pokemon-image img {
+    width: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.pokemon-info {
+    flex: 3;
+    text-align: left;
+    padding: 10px;
+    color: black;
+}
+
+.pokemon-info h3 {
+    color: red;
+    margin: 0;
+}
+
+.pokemon-info p {
+    margin: 0;
+}
