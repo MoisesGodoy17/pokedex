@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
-.pokemon-card{
+
+.pokemon-card {
     display: flex;
     flex-direction: column;
-    background-color:blanchedalmond;
-    border-radius: 30px;
+    background-color: blanchedalmond;
+    border-radius: 20px;
     border: 2px solid red;
     margin: 10px;
     width: 30vh;
@@ -13,9 +14,11 @@
 }
 
 .favorite-icon {
-   display: flex;
-   justify-content: end;
-   margin-right: 1vh;
+    display: flex;
+    justify-content: end;
+    margin-right: 1vh;
+    gap: 1vh;
+    cursor: pointer;
 }
 
 .favorite-icon img {
@@ -25,7 +28,7 @@
 
 .pokemon-image {
     flex: 1;
-    display: flex;  
+    display: flex;
     justify-content: center;
 }
 

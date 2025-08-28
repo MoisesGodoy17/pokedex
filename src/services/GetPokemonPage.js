@@ -1,4 +1,4 @@
-import  axios  from "axios";
+import axios from "axios";
 
 export async function getPokemonsPages(PageOffset) {
     const API_URL = `https://pokeapi.co/api/v2/pokemon?limit=30&offset=${PageOffset}`;
@@ -6,7 +6,7 @@ export async function getPokemonsPages(PageOffset) {
         const listPokemons = [];
         const response = await axios.get(API_URL);
         for (const item of response.data.results) {
-            const pokemonData = await getDataPokemon(item.url);
+            const pokemonData = await getDataPokemon(item.name);
             listPokemons.push(pokemonData);
         }
         return listPokemons;
@@ -16,8 +16,9 @@ export async function getPokemonsPages(PageOffset) {
     }
 }
 
-export async function getDataPokemon(API_URL_POKEMON) {
+export async function getDataPokemon(pokemonName) {
     try {
+        const API_URL_POKEMON = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
         const response = await axios.get(API_URL_POKEMON);
         const pokemonData = {
             id: response.data.id,
